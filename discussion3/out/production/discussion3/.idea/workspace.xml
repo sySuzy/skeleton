@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a2aa1706-fe58-4d6e-a3c1-bbeda4cd95f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javalib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2/Intlist/Intlist.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2/lab2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2setup/lab2setup.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab2setup/out/production/lab2setup/lab2setup.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../proj0/proj0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skeleton.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1av8W7VFHyJorEC1jiL6e5V3HSh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="JUnit.TestSLList.testInsert">
+    <configuration name="SLList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SLList" />
+      <module name="discussion3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSLList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="discussion3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSLList" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSLList.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="discussion3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSLList" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestSLList.testInsert" />
+        <item itemvalue="JUnit.TestSLList" />
+        <item itemvalue="Application.SLList" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2aa1706-fe58-4d6e-a3c1-bbeda4cd95f7" name="Default Changelist" comment="" />
+      <created>1587604735554</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587604735554</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1323" height="245" key="GridCell.Tab.0.bottom" timestamp="1587606416992">
+      <screen x="61" y="23" width="1379" height="877" />
+    </state>
+    <state width="672" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587606125011" />
+    <state width="1323" height="245" key="GridCell.Tab.0.bottom/61.23.1379.877@61.23.1379.877" timestamp="1587606416992" />
+    <state width="1323" height="245" key="GridCell.Tab.0.center" timestamp="1587606416992">
+      <screen x="61" y="23" width="1379" height="877" />
+    </state>
+    <state width="672" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587606125009" />
+    <state width="1323" height="245" key="GridCell.Tab.0.center/61.23.1379.877@61.23.1379.877" timestamp="1587606416992" />
+    <state width="1323" height="245" key="GridCell.Tab.0.left" timestamp="1587606416991">
+      <screen x="61" y="23" width="1379" height="877" />
+    </state>
+    <state width="672" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587606125008" />
+    <state width="1323" height="245" key="GridCell.Tab.0.left/61.23.1379.877@61.23.1379.877" timestamp="1587606416991" />
+    <state width="1323" height="245" key="GridCell.Tab.0.right" timestamp="1587606416992">
+      <screen x="61" y="23" width="1379" height="877" />
+    </state>
+    <state width="672" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587606125010" />
+    <state width="1323" height="245" key="GridCell.Tab.0.right/61.23.1379.877@61.23.1379.877" timestamp="1587606416992" />
+    <state x="238" y="23" key="SettingsEditor" timestamp="1587604775220">
+      <screen x="61" y="23" width="1379" height="877" />
+    </state>
+    <state x="238" y="23" key="SettingsEditor/61.23.1379.877@61.23.1379.877" timestamp="1587604775220" />
+    <state x="86" y="23" key="new project wizard" timestamp="1587606357809">
+      <screen x="61" y="23" width="1379" height="877" />
+    </state>
+    <state x="86" y="23" key="new project wizard/61.23.1379.877@61.23.1379.877" timestamp="1587606357809" />
+  </component>
+</project>
