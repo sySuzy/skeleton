@@ -16,7 +16,7 @@ public class IntListTest {
         IntList twoOne = new IntList(2, one);
         IntList threeTwoOne = new IntList(3, twoOne);
 
-        IntList x = IntList.list(3, 2, 1);
+        IntLi st x = IntList.list(3, 2, 1);
         assertEquals(threeTwoOne, x);
     }
 
@@ -59,15 +59,22 @@ public class IntListTest {
 
     @Test
     public void testCatenate() {
-        IntList A = IntList.list(1,2,3);
+        IntList A = IntList.list(1, 2, 3);
         IntList B = IntList.list(4, 5, 6);
         IntList exp = IntList.list(1, 2, 3, 4, 5, 6);
         assertEquals(exp, IntList.catenate(A, B));
         assertEquals(IntList.list(1, 2, 3), A);
     }
 
-    /** If you're running this from the command line, you'll need
-      * to add a main method. See ArithmeticTest.java for an
-      * example. */
+    @Test
+    public void testReverse() {
+        IntList A = IntList.list(1, 2, 3);
+        IntList exp = IntList.list(3, 2, 1);
+        assertEquals(exp, IntList.reverse(A));
+        assertNotEquals(A, IntList.list(1, 2, 3));
+
+        assertEquals(null, IntList.reverse(null));
+
+    }
 
 }
