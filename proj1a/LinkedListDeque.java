@@ -1,14 +1,14 @@
-public class LinkedListDeque<Item> {
+public class LinkedListDeque<T> {
     private class ItemNode {
-        public Item value;
+        public T value;
         public ItemNode after;
         public ItemNode before;
-        public ItemNode(Item value, ItemNode after, ItemNode before) {
+        public ItemNode(T value, ItemNode after, ItemNode before) {
             this.value = value;
             this.after = after;
             this.before = before;
         }
-        public ItemNode(Item value) {
+        public ItemNode(T value) {
             this.value = value;
             this.after = this;
             this.before = this;
@@ -22,13 +22,13 @@ public class LinkedListDeque<Item> {
         return;
     }
 
-    public void addFirst(Item item) {
+    public void addFirst(T item) {
         sentinel.after= new ItemNode(item, sentinel.after, sentinel);
         sentinel.after.after.before = sentinel.after;
         size ++;
     }
 
-    public void addLast(Item item) {
+    public void addLast(T item) {
         sentinel.before = new ItemNode(item, sentinel, sentinel.before);
         sentinel.before.before.after = sentinel.before;
         size ++;
@@ -50,31 +50,31 @@ public class LinkedListDeque<Item> {
         }
     }
 
-    public Item removeFirst() {
+    public T removeFirst() {
         if(size == 0) {
             System.out.println("The list is already empty!");
             return null;
         }
-        Item item = sentinel.after.value;
+        T item = sentinel.after.value;
         sentinel.after = sentinel.after.after;
         sentinel.after.before = sentinel;
         size --;
         return item;
     }
 
-    public Item removeLast() {
+    public T removeLast() {
         if(size == 0) {
             System.out.println("The list is already empty!");
             return null;
         }
-        Item item = sentinel.before.value;
+        T item = sentinel.before.value;
         sentinel.before = sentinel.before.before;
         sentinel.before.after = sentinel;
         size --;
         return item;
     }
 
-    public Item get(int index) {
+    public T get(int index) {
         ItemNode p = sentinel;
         if(index>size-1) {
             System.out.println("index out of range!");
@@ -86,7 +86,7 @@ public class LinkedListDeque<Item> {
         return p.value;
     }
 
-    private Item getRecursiveHelper(ItemNode p, int pos) {
+    private T getRecursiveHelper(ItemNode p, int pos) {
         if(pos==0) {
             return p.value;
         } else {
@@ -94,7 +94,7 @@ public class LinkedListDeque<Item> {
         }
     }
 
-    public Item getRecursive(int index) {
+    public T getRecursive(int index) {
         if(index>size-1){
             System.out.println("index out of range!");
             return null;

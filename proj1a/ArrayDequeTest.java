@@ -5,18 +5,18 @@ public class ArrayDequeTest {
 
     @Test
     public void testAddFirst() {
-        ArrayDeque x1 = new ArrayDeque();
+        ArrayDeque<Integer> x1 = new ArrayDeque<>();
         for (int i : new int[]{2,3}) {
             x1.addFirst(i);
         }
-        ArrayDeque expect1 = new ArrayDeque(new Integer[]{3,2});
+        ArrayDeque<Integer> expect1 = new ArrayDeque<>(new Integer[]{3,2});
         assertEquals(expect1, x1);
 
-        ArrayDeque x2 = new ArrayDeque();
+        ArrayDeque<Integer> x2 = new ArrayDeque<>();
         for (int i : new int[]{1,2,3,4,5,6,7,8,9,10}) {
             x2.addFirst(i);
         }
-        ArrayDeque expect2 = new ArrayDeque(new Integer[]{10,9,8,7,6,5,4,3,2,1});
+        ArrayDeque<Integer> expect2 = new ArrayDeque<>(new Integer[]{10,9,8,7,6,5,4,3,2,1});
         assertEquals(expect2, x2);
     }
 
