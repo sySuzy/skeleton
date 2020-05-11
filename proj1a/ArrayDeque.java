@@ -1,6 +1,6 @@
 
 public class ArrayDeque<T> {
-    private T[] array = (T[]) new Object[8];
+    public T[] array = (T[]) new Object[8];
     private int arraySize = 8;
     private int size = 0;
     private int start = 0;
@@ -9,12 +9,17 @@ public class ArrayDeque<T> {
     public ArrayDeque() {
     }
 
+    public void printArray() {
+        for (int i = 0; i<array.length; i++) {
+            System.out.print("\t" + array[i]);
+        }
+        System.out.println();
+    }
+
 
     // private tools
     private void resize() {
         double useage = (double) size / (double) arraySize;
-        System.out.println(useage);
-        System.out.println(useage);
         if ((useage < 1.0 && useage >= 0.25) || (useage < 0.25 && arraySize <= 16)) {
             return;
         }
@@ -30,7 +35,7 @@ public class ArrayDeque<T> {
         if (end > arraySize) {
             end = end % arraySize;
             System.arraycopy(array, start, array1, 0, arraySize - start);
-            System.arraycopy(array, 0, array1, arraySize - start + 1, end);
+            System.arraycopy(array, 0, array1, arraySize - start, end);
 
         } else {
             System.arraycopy(array, start, array1, 0, size);
