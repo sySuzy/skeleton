@@ -109,7 +109,7 @@ public class ArrayDeque<T> {
         }
         resize();
         T pop = array[start];
-        start = start + 1;
+        start = (start + 1) % arraySize;
         size = size - 1;
         return pop;
     }

@@ -11,12 +11,13 @@ public class ArrayDequeTest {
         Deque<Integer> x2 = new java.util.ArrayDeque<>();
         String msg = "";
 
-        for (int i = 0; i<100; i++) {
+        for (int i = 0; i<500; i++) {
             double r2 = StdRandom.uniform();
             if (r2 < 0.5) {
                 Integer v2 = StdRandom.uniform(100);
                 x1.addLast(v2);
                 x2.addLast(v2);
+                System.out.println("x1.addLast(" + v2 + ");\nx1.printArray();");
                 msg = msg + "addLast(" + v2 + ")\n";
             }
 
@@ -24,6 +25,7 @@ public class ArrayDequeTest {
             if(!x1.isEmpty() && r3 < 0.2) {
                 Integer f1 = x1.removeFirst();
                 Integer f2 = x2.removeFirst();
+                System.out.println("x1.removeFirst();\nx1.printArray();");
                 msg = msg + "removeFirst()\n";
                 assertEquals(msg, f2, f1);
 
