@@ -1,19 +1,12 @@
 
 public class ArrayDeque<T> {
-    public T[] array = (T[]) new Object[8];
+    private T[] array = (T[]) new Object[8];
     private int arraySize = 8;
     private int size = 0;
     private int start = 0;
 
     //    constructors
     public ArrayDeque() {
-    }
-
-    public void printArray() {
-        for (int i = 0; i<array.length; i++) {
-            System.out.print("\t" + array[i]);
-        }
-        System.out.println();
     }
 
 

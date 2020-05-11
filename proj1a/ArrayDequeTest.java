@@ -1,6 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 
 public class ArrayDequeTest {
@@ -11,7 +12,7 @@ public class ArrayDequeTest {
         Deque<Integer> x2 = new java.util.ArrayDeque<>();
         String msg = "";
 
-        for (int i = 0; i<500; i++) {
+        for (int i = 0; i < 500; i++) {
             double r2 = StdRandom.uniform();
             if (r2 < 0.5) {
                 Integer v2 = StdRandom.uniform(100);
@@ -22,7 +23,7 @@ public class ArrayDequeTest {
             }
 
             double r3 = StdRandom.uniform();
-            if(!x1.isEmpty() && r3 < 0.2) {
+            if (!x1.isEmpty() && r3 < 0.2) {
                 Integer f1 = x1.removeFirst();
                 Integer f2 = x2.removeFirst();
                 System.out.println("x1.removeFirst();\nx1.printArray();");
