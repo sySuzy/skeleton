@@ -1,3 +1,4 @@
+
 public class ArrayDeque<T> {
     private T[] array = (T[]) new Object[8];
     private int arraySize = 8;
@@ -6,13 +7,8 @@ public class ArrayDeque<T> {
 
     //    constructors
     public ArrayDeque() {
-
     }
 
-    public ArrayDeque(T[] x) {
-        array = x;
-        size = arraySize = x.length;
-    }
 
     // private tools
     private void resize() {
@@ -45,26 +41,26 @@ public class ArrayDeque<T> {
     }
 
 
-    public boolean equals(Object A1) {
-        if (!(A1 instanceof ArrayDeque)) {
-            return false;
-        }
-        ArrayDeque A = (ArrayDeque) A1;
-        if (A.size != this.size) {
-            return false;
-        }
-        int i1 = this.start;
-        int i2 = A.start;
-
-        for (int i = 0; i < size; i++) {
-            if (array[i1] != A.array[i2]) {
-                return false;
-            }
-            i1 = (i1 + 1) % arraySize;
-            i2 = (i2 + 1) % A.arraySize;
-        }
-        return true;
-    }
+//    public boolean equals(Object A1) {
+//        if (!(A1 instanceof ArrayDeque)) {
+//            return false;
+//        }
+//        ArrayDeque A = (ArrayDeque) A1;
+//        if (A.size != this.size) {
+//            return false;
+//        }
+//        int i1 = this.start;
+//        int i2 = A.start;
+//
+//        for (int i = 0; i < size; i++) {
+//            if (array[i1] != A.array[i2]) {
+//                return false;
+//            }
+//            i1 = (i1 + 1) % arraySize;
+//            i2 = (i2 + 1) % A.arraySize;
+//        }
+//        return true;
+//    }
 
     public void addFirst(T item) {
         if (size == arraySize) {
@@ -138,6 +134,5 @@ public class ArrayDeque<T> {
     }
 
 
-
-
 }
+
