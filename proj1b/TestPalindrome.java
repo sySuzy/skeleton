@@ -20,5 +20,14 @@ public class TestPalindrome {
         assertTrue(palindrome.isPalindrome("a"));
         assertTrue(palindrome.isPalindrome("aba"));
         assertFalse(palindrome.isPalindrome("abca"));
+        assertFalse(palindrome.isPalindrome("Aba"));
+
+        CharacterComparator obo = new OffByOne();
+        assertTrue(palindrome.isPalindrome("flake", obo));
+        assertTrue(palindrome.isPalindrome("&lak%", obo));
+        assertFalse(palindrome.isPalindrome("Flake", obo));
+        assertFalse(palindrome.isPalindrome("%lak%", obo));
     }
+
+
 }

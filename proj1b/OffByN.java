@@ -1,6 +1,6 @@
 import static java.lang.Math.abs;
 
-public class OffByN implements CharacterComparator{
+public class OffByN implements CharacterComparator {
     private int n;
 
     public OffByN(int N) {
@@ -9,9 +9,9 @@ public class OffByN implements CharacterComparator{
 
     @Override
     public boolean equalChars(char x, char y) {
-        if(abs(x - y) == n) {
+        if (abs(x - y) == n) {
             return true;
         }
-            return false;
-        }
+        return false;
+    }
 }
