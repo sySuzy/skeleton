@@ -1,7 +1,4 @@
 package synthesizer;
-import synthesizer.AbstractBoundedQueue;
-import java.util.Iterator;
-
 import java.util.Iterator;
 
 public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
@@ -68,13 +65,13 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return new ourIterator();
+        return new OurIterator();
     }
 
-    public class ourIterator implements Iterator<T> {
-        public int index;
+    private class OurIterator implements Iterator<T> {
+        int index;
 
-        public ourIterator() {
+        OurIterator() {
             index = 0;
         }
 
@@ -90,14 +87,14 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
 
     }
 
-    public static void main(String[] args) {
-        BoundedQueue<Double> x = new ArrayRingBuffer<>(4);
-        x.enqueue(33.1); // 33.1 null null  null
-        x.enqueue(44.8); // 33.1 44.8 null  null
-        x.enqueue(62.3); // 33.1 44.8 62.3  null
-        x.enqueue(-3.4); // 33.1 44.8 62.3 -3.4
-        System.out.println(x.dequeue());     // 44.8 62.3 -3.4  null (returns 33.1)
-        System.out.println(x.dequeue());
-    }
+//    public static void main(String[] args) {
+//        BoundedQueue<Double> x = new ArrayRingBuffer<>(4);
+//        x.enqueue(33.1); // 33.1 null null  null
+//        x.enqueue(44.8); // 33.1 44.8 null  null
+//        x.enqueue(62.3); // 33.1 44.8 62.3  null
+//        x.enqueue(-3.4); // 33.1 44.8 62.3 -3.4
+//        System.out.println(x.dequeue());     // 44.8 62.3 -3.4  null (returns 33.1)
+//        System.out.println(x.dequeue());
+//    }
 
 }
