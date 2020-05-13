@@ -1,6 +1,8 @@
 package synthesizer;
-//import synthesizer.AbstractBoundedQueue;
-//import java.util.Iterator;
+import synthesizer.AbstractBoundedQueue;
+import java.util.Iterator;
+
+import java.util.Iterator;
 
 public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
     /* Index for the next dequeue or peek. */
@@ -27,9 +29,8 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
      * covered Monday.
      */
     public void enqueue(T x) {
-        // TODO: Enqueue the item. Don't forget to increase fillCount and update last.
-        if(this.isFull()) {
-            System.out.println("The deque is full!!");
+        if (this.isFull()) {
+            throw new RuntimeException("Ring Buffer Overflow");
         } else {
             rb[last] = x;
             last = (last + 1) % capacity;
@@ -43,10 +44,8 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
      * covered Monday.
      */
     public T dequeue() {
-        // TODO: Dequeue the first item. Don't forget to decrease fillCount and update
-        if(this.isEmpty()) {
-            System.out.println("The deque is empty!!");
-            return null;
+        if (this.isEmpty()) {
+            throw new RuntimeException("Ring Buffer Underflow");
         } else {
             T res = rb[first];
             first = (first + 1) % capacity;
@@ -59,13 +58,36 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
      * Return oldest item, but don't remove it.
      */
     public T peek() {
-        // TODO: Return the first item. None of your instance variables should change.
-        if(this.isEmpty()) {
+        if (this.isEmpty()) {
             System.out.println("The deque is empty!!");
             return null;
         } else {
             return rb[first];
         }
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new ourIterator();
+    }
+
+    public class ourIterator implements Iterator<T> {
+        public int index;
+
+        public ourIterator() {
+            index = 0;
+        }
+
+        public boolean hasNext() {
+            return index < fillCount;
+        }
+
+        public T next() {
+            T res = rb[first];
+            index = (index + 1) % capacity;
+            return res;
+        }
+
     }
 
     public static void main(String[] args) {
@@ -78,5 +100,4 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
         System.out.println(x.dequeue());
     }
 
-    // TODO: When you get to part 5, implement the needed code to support iteration.
 }
