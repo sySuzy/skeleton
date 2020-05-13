@@ -56,8 +56,7 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
      */
     public T peek() {
         if (this.isEmpty()) {
-            System.out.println("The deque is empty!!");
-            return null;
+            throw new RuntimeException("The deque is empty!");
         } else {
             return rb[first];
         }
@@ -72,7 +71,7 @@ public class ArrayRingBuffer<T>  extends AbstractBoundedQueue<T> {
         int index;
 
         OurIterator() {
-            index = 0;
+            index = first;
         }
 
         public boolean hasNext() {
