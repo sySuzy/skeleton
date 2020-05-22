@@ -88,7 +88,7 @@ public class Percolation {
         return WQF.connected(N * N, N * N + 1);
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         Percolation percolation = new Percolation(10);
     }
 }
