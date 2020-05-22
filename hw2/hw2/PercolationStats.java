@@ -3,9 +3,9 @@ import edu.princeton.cs.introcs.StdRandom;
 import edu.princeton.cs.introcs.StdStats;
 
 public class PercolationStats {
-    double[] openFraction;
-    int T;
-    int N;
+    private double[] openFraction;
+    private int T;
+    private int N;
 
     public PercolationStats(int N, int T, PercolationFactory pf) {
         if (N <= 0 || T <= 0) {
