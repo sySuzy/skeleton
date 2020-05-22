@@ -43,11 +43,4 @@ public class PercolationStats {
         return mean() + 1.96 * stddev() / Math.sqrt(this.T);
     }
 
-    public static void main(String[] args) {
-        PercolationStats experiments = new PercolationStats(5, 10, new PercolationFactory());
-        System.out.println(experiments.mean());
-        System.out.println(experiments.stddev());
-        System.out.println(experiments.confidenceLow());
-        System.out.println(experiments.confidenceHigh());
-    }
 }
