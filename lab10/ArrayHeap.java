@@ -103,6 +103,7 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
     private void swim(int index) {
         // Throws an exception if index is invalid. DON'T CHANGE THIS LINE.
         validateSinkSwimArg(index);
+
         if (index == 1) {
             return;
         }
@@ -181,7 +182,9 @@ public class ArrayHeap<T> implements ExtrinsicPQ<T> {
         T res = contents[1].myItem;
         swap(1, size);
         size = size - 1;
-        sink(1);
+        if (size > 0) {
+            sink(1);
+        }
         return res;
     }
 
