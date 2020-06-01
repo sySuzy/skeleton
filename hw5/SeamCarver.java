@@ -29,28 +29,28 @@ public class SeamCarver {
     }
 
     private int upperY(int y) {
-        if (y + 1 >= height) {
-            return 0;
-        }
-        return y + 1;
-    }
-
-    private int bottomY(int y) {
-        if (y - 1 < 0) {
+        if (y == 0) {
             return height - 1;
         }
         return y - 1;
     }
 
+    private int bottomY(int y) {
+        if (y == height - 1) {
+            return 0;
+        }
+        return y + 1;
+    }
+
     private int leftX(int x) {
-        if (x - 1 < 0) {
+        if (x == 0) {
             return width - 1;
         }
         return x - 1;
     }
 
     private int rightX(int x) {
-        if (x + 1 >= width) {
+        if (x == width - 1) {
             return 0;
         }
         return x + 1;
