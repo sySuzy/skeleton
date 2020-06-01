@@ -6,6 +6,8 @@ public class SeamCarver {
     private Picture picture;
     private int width;
     private int height;
+    public double[][] distTo;
+    public int[][] edgeTo;
 
     public SeamCarver(Picture picture) {
         this.picture = picture;
@@ -86,9 +88,9 @@ public class SeamCarver {
         double minValue = Double.MAX_VALUE;
 
         for (int x : X) {
-            if (energy(x, y) < minValue) {
+            if (distTo[x][y] < minValue) {
                 minIndex = x;
-                minValue = energy(x, y);
+                minValue = distTo[x][y];
             }
         }
         return minIndex;
@@ -97,8 +99,10 @@ public class SeamCarver {
     public int[] findVerticalSeam() {
         // sequence of indices for vertical seam
         int[] delCols = new int[height];
-        double[][] distTo = new double[width][height];
-        int[][] edgeTo = new int[width][height];
+//        double[][] distTo = new double[width][height];
+//        int[][] edgeTo = new int[width][height];
+        this.distTo = new double[width][height];
+        this.edgeTo = new int[width][height];
         for (int x = 0; x < width; x++) {
             distTo[x][0] = energy(x, 0);
             edgeTo[x][0] = -1;
@@ -108,7 +112,7 @@ public class SeamCarver {
         for (int y = 1; y < height; y++) {
             int index = minXOfEnergy(new int[]{0, 1}, y - 1);
             edgeTo[0][y] = index;
-            distTo[0][y] = energy(0, y) + distTo[index][0];
+            distTo[0][y] = energy(0, y) + distTo[index][y - 1];
             for (int x = 1; x < width-1; x++) {
                 index = minXOfEnergy(new int[]{x-1, x, x+1}, y - 1);
                 edgeTo[x][y] = index;
@@ -117,6 +121,7 @@ public class SeamCarver {
             index = minXOfEnergy(new int[]{width-2, width-1}, y - 1);
             edgeTo[width-1][y] = index;
             distTo[width-1][y] = energy(width-1, y) + distTo[index][y - 1];
+
         }
 
         int minIndex = 0;
