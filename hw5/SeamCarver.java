@@ -6,8 +6,8 @@ public class SeamCarver {
     private Picture picture;
     private int width;
     private int height;
-    public double[][] distTo;
-    public int[][] edgeTo;
+    private double[][] distTo;
+    private int[][] edgeTo;
 
     public SeamCarver(Picture picture) {
         this.picture = picture;
